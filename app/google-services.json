@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "378026114299",
+    "project_id": "projectcake-b8a05",
+    "storage_bucket": "projectcake-b8a05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378026114299:android:ae8669a7fba8b40727045e",
+        "android_client_info": {
+          "package_name": "com.nguyenvanminhnhat.projectcake"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378026114299-4v2rb2tfpdfeo8g701etfm38tldtkeg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3dOzcSb8ngSelPPQvvC670qljJdrQUx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "378026114299-4v2rb2tfpdfeo8g701etfm38tldtkeg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378026114299:android:2f2f8111d6bdb02f27045e",
+        "android_client_info": {
+          "package_name": "com.nguyenvanminhnhat.projectcakeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378026114299-4v2rb2tfpdfeo8g701etfm38tldtkeg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3dOzcSb8ngSelPPQvvC670qljJdrQUx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "378026114299-4v2rb2tfpdfeo8g701etfm38tldtkeg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
