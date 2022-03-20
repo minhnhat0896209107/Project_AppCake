@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.view.WindowManager
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.Navigation
@@ -33,8 +34,7 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(setOf( R.id.home, R.id.favourite, R.id.blog, R.id.chat, R.id.profile))
 
         bottomNavigation.setupWithNavController(navController)
-
-
+        setupNav()
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -59,9 +59,31 @@ class MainActivity : AppCompatActivity() {
                 Navigation.findNavController(this, R.id.fragment_host).navigate(R.id.chat)
             R.id.profile ->
                 Navigation.findNavController(this, R.id.fragment_host).navigate(R.id.profile)
-
         }
         return super.onOptionsItemSelected(item)
     }
+    private fun showBottomNav() {
+        bottomNavigation.visibility = View.VISIBLE
 
+    }
+
+    private fun hideBottomNav() {
+        bottomNavigation.visibility = View.GONE
+
+    }
+    private fun setupNav() {
+        val navController = findNavController(R.id.fragment_host)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.home -> showBottomNav()
+                R.id.favourite -> showBottomNav()
+                R.id.blog -> showBottomNav()
+                R.id.chat -> showBottomNav()
+                R.id.profile -> showBottomNav()
+
+                else -> hideBottomNav()
+            }
+        }
+    }
 }

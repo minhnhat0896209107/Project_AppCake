@@ -18,6 +18,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.nguyenvanminhnhat.projectcakeapp.R
 import com.nguyenvanminhnhat.projectcakeapp.adapter.ListCategoryAdapter
+import com.nguyenvanminhnhat.projectcakeapp.const.onHideKeyBoard
 import com.nguyenvanminhnhat.projectcakeapp.pojo.model.CategoryModel
 
 import kotlinx.android.synthetic.main.fragment_list_category.*
@@ -69,7 +70,6 @@ class ListCategoryFragment : Fragment() {
     private fun searchCategory() {
         edtFind.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                listCateAdapter.filter.filter(p0)
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -77,7 +77,6 @@ class ListCategoryFragment : Fragment() {
             }
 
             override fun afterTextChanged(p0: Editable?) {
-                listCateAdapter.filter.filter(p0)
             }
 
         })

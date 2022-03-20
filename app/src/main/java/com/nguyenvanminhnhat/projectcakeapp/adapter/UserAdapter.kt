@@ -13,7 +13,7 @@ import com.nguyenvanminhnhat.projectcakeapp.pojo.model.UserModel
 import kotlinx.android.synthetic.main.item_review.view.*
 import kotlinx.android.synthetic.main.item_search_user.view.*
 
-class UserAdapter (isChatCheck: Boolean) : RecyclerView.Adapter<UserAdapter.IUserVH>(), Filterable{
+class UserAdapter (isChatCheck: Boolean,var onClickUser: (UserModel) -> Unit) : RecyclerView.Adapter<UserAdapter.IUserVH>(), Filterable{
     private val isChatCheck: Boolean = isChatCheck
     private var items = mutableListOf<UserModel>()
     private var itemsOld = mutableListOf<UserModel>()
@@ -25,7 +25,10 @@ class UserAdapter (isChatCheck: Boolean) : RecyclerView.Adapter<UserAdapter.IUse
         notifyDataSetChanged()
     }
 
-    class IUserVH(view: View) : RecyclerView.ViewHolder(view){
+    class IUserVH(
+        view: View,
+        var onClickUser: (UserModel) -> Unit
+    ) : RecyclerView.ViewHolder(view){
         fun bind(data : List<UserModel>, position: Int){
             itemView.apply {
                 val user : UserModel = data[position]
@@ -48,13 +51,17 @@ class UserAdapter (isChatCheck: Boolean) : RecyclerView.Adapter<UserAdapter.IUse
                     }
 
                 }
+
+                setOnClickListener {
+                    onClickUser.invoke(data[position])
+                }
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IUserVH {
         var view = LayoutInflater.from(parent.context).inflate(R.layout.item_search_user, parent, false)
-        return IUserVH(view)
+        return IUserVH(view, onClickUser)
     }
 
     override fun onBindViewHolder(holder: IUserVH, position: Int) {

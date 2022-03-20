@@ -7,12 +7,11 @@ import com.google.firebase.auth.FirebaseUser
 import com.nguyenvanminhnhat.projectcakeapp.pojo.firebase.Firebase
 
 class AuthViewModel : ViewModel() {
-    private lateinit var repo: Firebase
+    private var repo: Firebase = Firebase()
     private var userData = MutableLiveData<FirebaseUser>()
 
 
     init {
-        repo = Firebase()
         userData = repo.getFirebaseUserMutableLiveData()
     }
 

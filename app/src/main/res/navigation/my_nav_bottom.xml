@@ -92,14 +92,6 @@
             android:id="@+id/action_message_to_chat"
             app:destination="@id/chat" />
     </fragment>
-    <fragment
-        android:id="@+id/search"
-        android:name="com.nguyenvanminhnhat.projectcakeapp.view.chat.search.SearchFragment"
-        android:label="fragment_search"
-        tools:layout="@layout/fragment_search" >
-        <action
-            android:id="@+id/action_search_to_chat"
-            app:destination="@id/chat" />
-    </fragment>
+
 
 </navigation>

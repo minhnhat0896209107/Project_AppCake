@@ -9,12 +9,17 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#FF3700B3</color>
     <color name="grey">#D0AFA2A2</color>
-    <color name="yellow">#FBB148</color>
+    <color name="yellow">#FABC64</color>
     <color name="selected">#0ABEFF</color>
     <color name="unselected">#8B8B8B</color>
     <color name="coloricon">#0ABEFF</color>
     <color name="red">#E5FF0027</color>
     <color name="colorProfile">#1C223C</color>
     <color name="black_overlay">#66000000</color>
+    <color name="colorTextBackground">#f5f5f5</color>
+    <color name="colorItemLeft">#E6E4E4</color>
+    <color name="colorItemRight">#813fd7</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorText">#464646</color>
 
 </resources>

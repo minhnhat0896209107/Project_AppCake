@@ -31,7 +31,6 @@ class FirebaseProfile {
 
                 if(snapshot.exists()){
                     val userModel = snapshot.getValue(UserModel::class.java)
-                    Log.d("test", "${userModel?.username}")
                     if (userModel != null) {
                         iResultProfile.onSuccess(userModel)
                     }

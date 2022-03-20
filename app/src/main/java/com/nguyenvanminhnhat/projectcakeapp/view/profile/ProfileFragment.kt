@@ -11,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.nguyenvanminhnhat.projectcakeapp.R
 import com.nguyenvanminhnhat.projectcakeapp.pojo.model.UserModel
+import com.nguyenvanminhnhat.projectcakeapp.view.chat.message.MessageFragment
 import com.nguyenvanminhnhat.projectcakeapp.view.login.LoginActivity
 import kotlinx.android.synthetic.main.fragment_profile.*
 
@@ -49,7 +50,7 @@ class ProfileFragment : Fragment() {
             tvUser.text = t.username
             tvEmail.text = t.email
             tvPhone.text = t.phone
-
         }
     }
 }
+

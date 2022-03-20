@@ -35,7 +35,6 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Email hoặc mật khẩu không được null", Toast.LENGTH_SHORT).show()
             }else{
                 viewModel.signIn(email, password)
-
                 Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show()
             }
         }
