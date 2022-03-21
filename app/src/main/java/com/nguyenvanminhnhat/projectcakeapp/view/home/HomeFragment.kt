@@ -120,10 +120,5 @@ class HomeFragment : Fragment() {
 
         }, 500, 5000)
     }
-
-    override fun onStop() {
-        super.onStop()
-
-    }
 }
 
