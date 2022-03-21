@@ -87,9 +87,4 @@ class FavouriteFragment : Fragment() {
         }
     }
 
-    override fun onStop() {
-        super.onStop()
-        onRefresh(false)
-    }
-
 }

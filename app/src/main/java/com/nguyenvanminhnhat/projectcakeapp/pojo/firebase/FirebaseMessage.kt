@@ -10,6 +10,7 @@ import com.nguyenvanminhnhat.projectcakeapp.pojo.model.UserModel
 class FirebaseMessage {
     private var root: DatabaseReference? = null
     private var chatRoot : DatabaseReference?= null
+    private var chatQuery: Query?= null
     private lateinit var iListUser: IListUser
     private var firebaseUser: FirebaseUser? = null
     private var listUser = mutableListOf<UserModel>()
@@ -25,7 +26,7 @@ class FirebaseMessage {
         firebaseUser = FirebaseAuth.getInstance().currentUser
         root = FirebaseDatabase.getInstance().reference.child("Users")
         chatRoot = FirebaseDatabase.getInstance().getReference("Chat")
-
+        chatQuery = chatRoot?.child("message")
     }
 
     fun getUser(){
@@ -96,6 +97,20 @@ class FirebaseMessage {
                 }
                 iMessage.onSuccessChat(listChat)
             }
+        })
+    }
+
+    fun removeMessage(message: String){
+        listChat.clear()
+        chatQuery?.equalTo(message)?.addListenerForSingleValueEvent(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                for (dataSnapshot: DataSnapshot in snapshot.children){
+                    dataSnapshot.ref.removeValue()
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+            }
+
         })
     }
 

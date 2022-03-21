@@ -23,7 +23,7 @@ class ChatViewModel : ViewModel() , IListUser, IMessage, IUser {
     }
 
     override fun onSuccess(success: List<UserModel>) {
-        listUser.postValue(success)
+        listUserLiveData.postValue(success)
     }
 
     override fun onSuccessChat(successes: List<MessageModel>) {

@@ -31,7 +31,6 @@ class FirebaseFavourite {
                 }
             }
             override fun onCancelled(error: DatabaseError) {
-                Log.e("ABC", "Worng", error.toException())
             }
 
         })

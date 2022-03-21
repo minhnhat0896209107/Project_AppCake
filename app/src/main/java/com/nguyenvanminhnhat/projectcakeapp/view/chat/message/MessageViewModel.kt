@@ -23,6 +23,10 @@ class MessageViewModel : ViewModel(), IListUser, IMessage, IUser {
         repo.getUser()
     }
 
+    fun removeMessage(message: String){
+        repo.removeMessage(message)
+    }
+
     fun readMessage(senderId: String, receiverId: String){
         repo.readMessage(senderId, receiverId)
     }
