@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
+import com.nguyenvanminhnhat.projectcakeapp.itf.IResultProfile
 import com.nguyenvanminhnhat.projectcakeapp.pojo.model.UserModel
 
 class FirebaseProfile {
@@ -48,8 +49,4 @@ class FirebaseProfile {
         firebaseUserLogoutLiveData.postValue(true)
     }
 
-    interface IResultProfile {
-        fun onSuccess(success: UserModel)
-        fun onError(error: String)
-    }
 }

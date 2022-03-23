@@ -55,12 +55,7 @@ class DetailFragment : Fragment() {
         val number = dec.format(popular.priceCake)
         tvPrice.text = "$number VNĐ"
 
-//        popular.reviewCake?.let { reviewAdapter.setData(it) }
-
         popular.reviewCake?.let { reviewAdapter.setData(it) }
-
-        Log.d("AAA", "${popular.reviewCake}")
-        Log.d("CCC", "${popular}")
 
     }
     private fun init(){

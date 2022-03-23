@@ -1,4 +1,4 @@
-package com.nguyenvanminhnhat.projectcakeapp.`interface`
+package com.nguyenvanminhnhat.projectcakeapp.itf
 
 import com.nguyenvanminhnhat.projectcakeapp.const.Constant.Companion.CONTENT_TYPE
 import com.nguyenvanminhnhat.projectcakeapp.const.Constant.Companion.SERVER_KEY

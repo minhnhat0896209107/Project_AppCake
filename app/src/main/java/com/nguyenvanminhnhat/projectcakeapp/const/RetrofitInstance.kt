@@ -1,6 +1,6 @@
 package com.nguyenvanminhnhat.projectcakeapp.const
 
-import com.nguyenvanminhnhat.projectcakeapp.`interface`.NotificationApi
+import com.nguyenvanminhnhat.projectcakeapp.itf.NotificationApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

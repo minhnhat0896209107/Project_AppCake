@@ -2,10 +2,11 @@ package com.nguyenvanminhnhat.projectcakeapp.view.profile
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.nguyenvanminhnhat.projectcakeapp.itf.IResultProfile
 import com.nguyenvanminhnhat.projectcakeapp.pojo.firebase.FirebaseProfile
 import com.nguyenvanminhnhat.projectcakeapp.pojo.model.UserModel
 
-class ProfileViewModel : ViewModel(), FirebaseProfile.IResultProfile {
+class ProfileViewModel : ViewModel(), IResultProfile {
     private var repo: FirebaseProfile = FirebaseProfile()
     private var userLogout = MutableLiveData<Boolean>()
     private var userLiveData = MutableLiveData<UserModel>()
@@ -33,8 +34,5 @@ class ProfileViewModel : ViewModel(), FirebaseProfile.IResultProfile {
         userLiveData.postValue(success)
     }
 
-    override fun onError(error: String) {
-        TODO("Not yet implemented")
-    }
 
 }
