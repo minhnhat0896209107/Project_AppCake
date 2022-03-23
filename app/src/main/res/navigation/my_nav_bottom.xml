@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_blog_to_home"
             app:destination="@id/home" />
+        <action
+            android:id="@+id/action_blog_to_add"
+            app:destination="@id/add" />
     </fragment>
     <fragment
         android:id="@+id/chat"
@@ -91,6 +94,15 @@
         <action
             android:id="@+id/action_message_to_chat"
             app:destination="@id/chat" />
+    </fragment>
+    <fragment
+        android:id="@+id/add"
+        android:name="com.nguyenvanminhnhat.projectcakeapp.view.blog.add.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_add_to_blog"
+            app:destination="@id/blog" />
     </fragment>
 
 

@@ -18,7 +18,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.nguyenvanminhnhat.projectcakeapp.R
 import com.nguyenvanminhnhat.projectcakeapp.adapter.ListCategoryAdapter
-import com.nguyenvanminhnhat.projectcakeapp.const.onHideKeyBoard
+import com.nguyenvanminhnhat.projectcakeapp.const.Constant.Companion.BASE_FIREBASE_URL
 import com.nguyenvanminhnhat.projectcakeapp.pojo.model.CategoryModel
 
 import kotlinx.android.synthetic.main.fragment_list_category.*
@@ -87,7 +87,7 @@ class ListCategoryFragment : Fragment() {
         var nameData = it.nameCategory
         val dataBaseReference: DatabaseReference = FirebaseDatabase
             .getInstance()
-            .getReferenceFromUrl("https://projectcake-b8a05-default-rtdb.firebaseio.com/")
+            .getReferenceFromUrl(BASE_FIREBASE_URL)
             .child("ImageFavourite")
             .child("id$nameData")
 
