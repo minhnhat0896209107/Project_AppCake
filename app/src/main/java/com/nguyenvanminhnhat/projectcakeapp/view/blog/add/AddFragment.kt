@@ -85,7 +85,11 @@ class AddFragment : Fragment() {
         val progress = ProgressDialog(context)
         progress.setTitle("Đang đăng bài viết")
         progress.show()
+        var countLike = 0
         var randomId : String = UUID.randomUUID().toString()
+        for (i in 0..100){
+            countLike = i
+        }
         val imgName : StorageReference = storage.child("image$randomId")
         imgName.putFile(imgData).addOnSuccessListener(OnSuccessListener { _ ->
             progress.dismiss()
@@ -97,7 +101,7 @@ class AddFragment : Fragment() {
                 val hashMap: HashMap<String, String> = HashMap()
                 hashMap["imageUrl"] = it.toString()
                 hashMap["userName"] = userModel.username.toString()
-                hashMap["countLike"] = "10"
+                hashMap["countLike"] = "${countLike}"
                 hashMap["title"] = titleStr
                 hashMap["description"] = descriptStr
                 databaseReference.setValue(hashMap)

@@ -53,6 +53,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
     implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.firebase:firebase-messaging:23.0.2'
     def nav_version = "2.4.0"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -109,6 +110,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.7'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    // scalable size unit
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
 }
 kapt {
