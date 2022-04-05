@@ -1,4 +1,4 @@
-package com.nguyenvanminhnhat.projectcakeapp.const
+package com.nguyenvanminhnhat.projectcakeapp.utils
 
 import com.nguyenvanminhnhat.projectcakeapp.itf.NotificationApi
 import retrofit2.Retrofit

@@ -1,7 +1,7 @@
 package com.nguyenvanminhnhat.projectcakeapp.itf
 
-import com.nguyenvanminhnhat.projectcakeapp.const.Constant.Companion.CONTENT_TYPE
-import com.nguyenvanminhnhat.projectcakeapp.const.Constant.Companion.SERVER_KEY
+import com.nguyenvanminhnhat.projectcakeapp.utils.Constant.Companion.CONTENT_TYPE
+import com.nguyenvanminhnhat.projectcakeapp.utils.Constant.Companion.SERVER_KEY
 import com.nguyenvanminhnhat.projectcakeapp.pojo.model.PushNotification
 import okhttp3.ResponseBody
 import retrofit2.Response

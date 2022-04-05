@@ -1,8 +1,6 @@
 package com.nguyenvanminhnhat.projectcakeapp.view.chat.message
 
 import android.app.AlertDialog
-import android.content.DialogInterface
-import android.content.Intent.getIntent
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -12,15 +10,13 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.nguyenvanminhnhat.projectcakeapp.R
 import com.nguyenvanminhnhat.projectcakeapp.adapter.MessageAdapter
-import com.nguyenvanminhnhat.projectcakeapp.const.RetrofitInstance
-import com.nguyenvanminhnhat.projectcakeapp.const.onHideKeyBoard
-import com.nguyenvanminhnhat.projectcakeapp.pojo.firebase.FirebaseProfile
+import com.nguyenvanminhnhat.projectcakeapp.utils.RetrofitInstance
+import com.nguyenvanminhnhat.projectcakeapp.utils.onHideKeyBoard
 import com.nguyenvanminhnhat.projectcakeapp.pojo.model.NotificationData
 import com.nguyenvanminhnhat.projectcakeapp.pojo.model.PushNotification
 import com.nguyenvanminhnhat.projectcakeapp.pojo.model.UserModel

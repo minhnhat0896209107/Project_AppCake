@@ -18,7 +18,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.nguyenvanminhnhat.projectcakeapp.R
 import com.nguyenvanminhnhat.projectcakeapp.adapter.ListCategoryAdapter
-import com.nguyenvanminhnhat.projectcakeapp.const.Constant.Companion.BASE_FIREBASE_URL
+import com.nguyenvanminhnhat.projectcakeapp.utils.Constant.Companion.BASE_FIREBASE_URL
 import com.nguyenvanminhnhat.projectcakeapp.pojo.model.CategoryModel
 
 import kotlinx.android.synthetic.main.fragment_list_category.*

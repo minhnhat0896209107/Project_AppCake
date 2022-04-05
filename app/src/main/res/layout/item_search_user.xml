@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <de.hdodenhof.circleimageview.CircleImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:id="@+id/ciProfile"
         android:src="@drawable/ic_profile"
         android:layout_width="60dp"
-        android:layout_height="60dp"/>
+        android:layout_height="60dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvUserName"
@@ -16,47 +20,81 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/ciProfile"
+        android:layout_marginTop="15dp"
         android:text="User name"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/ciProfile"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ciOnline"
         android:src="@drawable/ic_profile"
         android:layout_below="@id/tvUserName"
         android:layout_marginTop="12dp"
-        android:layout_toRightOf="@id/tvUserName"
+        app:layout_constraintLeft_toRightOf="@id/tvUserName"
         android:layout_marginLeft="-20dp"
         android:layout_toEndOf="@id/ciProfile"
         app:civ_border_width="12dp"
         android:visibility="gone"
         app:civ_border_color = "#05df29"
         android:layout_width="18dp"
-        android:layout_height="18dp"/>
+        android:layout_height="18dp"
+        tools:ignore="MissingConstraints" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ciOffline"
         android:src="@drawable/ic_profile"
         android:layout_below="@id/tvUserName"
         android:layout_marginTop="12dp"
-        android:layout_toRightOf="@id/tvUserName"
+        app:layout_constraintLeft_toRightOf="@id/tvUserName"
         android:layout_marginLeft="-20dp"
         android:layout_toEndOf="@id/ciProfile"
         app:civ_border_width="12dp"
         app:civ_border_color = "#bfbfbf"
         android:visibility="gone"
         android:layout_width="18dp"
-        android:layout_height="18dp"/>
+        android:layout_height="18dp"
+        tools:ignore="MissingConstraints" />
+
 
     <TextView
+        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/tvMessageLast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvUserName"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="14dp"
-        android:layout_toRightOf="@+id/ciProfile"
+        android:layout_marginTop="29dp"
+        app:layout_constraintLeft_toRightOf="@+id/ciProfile"
         android:maxLines="1"
         android:padding="6dp"
         android:textColor="@color/design_default_color_primary_dark"
-        android:textSize="15sp" />
-</RelativeLayout>
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/ivPhone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="96dp"
+        android:src="@drawable/ic_phone_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tvUserName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/ivVideoCam"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/ic_videocam_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ivPhone"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

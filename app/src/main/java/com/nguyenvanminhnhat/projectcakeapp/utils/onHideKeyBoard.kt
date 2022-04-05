@@ -1,4 +1,4 @@
-package com.nguyenvanminhnhat.projectcakeapp.const
+package com.nguyenvanminhnhat.projectcakeapp.utils
 
 import android.app.Activity
 import android.content.Context
