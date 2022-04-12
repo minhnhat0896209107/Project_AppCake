@@ -1,0 +1,58 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "e72920c4b06f4efc7fbf05cd4c34a3f2",
+    "entities": [
+      {
+        "tableName": "cartModel",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCart` INTEGER PRIMARY KEY AUTOINCREMENT, `imageCake` TEXT, `nameCake` TEXT, `priceCake` INTEGER, `countQuantity` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "idCart",
+            "columnName": "idCart",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imageCake",
+            "columnName": "imageCake",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nameCake",
+            "columnName": "nameCake",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "priceCake",
+            "columnName": "priceCake",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countQuantity",
+            "columnName": "countQuantity",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idCart"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e72920c4b06f4efc7fbf05cd4c34a3f2')"
+    ]
+  }
+}

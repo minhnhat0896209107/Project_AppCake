@@ -16,5 +16,6 @@
     <string name="input_re_password">Nhập lại mật khẩu</string>
     <string name="input_user_name">Nhập tên người dùng</string>
     <string name="input_phone">Nhập số điện thoại</string>
+    <string name="cart">Giỏ hàng</string>
 
 </resources>
