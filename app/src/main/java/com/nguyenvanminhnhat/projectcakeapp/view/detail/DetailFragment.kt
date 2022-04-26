@@ -3,6 +3,7 @@ package com.nguyenvanminhnhat.projectcakeapp.view.detail
 import android.content.Intent.getIntent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +28,6 @@ class DetailFragment : Fragment() {
     private lateinit var reviewAdapter: ReviewAdapter
     private lateinit var popular: PopularCakeModel
     private val detailViewModel : DetailViewModel by viewModels()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -51,17 +51,15 @@ class DetailFragment : Fragment() {
         }
         tvAddCart.setOnClickListener {
             cartModel.apply {
+                idCart = "id${popular.nameCake}"
                 nameCake = popular.nameCake
-                priceCake = popular.priceCake
+                priceCake = popular.priceCake!!
                 imageCake = popular.imageCake
             }
             tvAddCart.setBackgroundColor(Color.GRAY)
-            if (cartModel != null){
-                detailViewModel.insertCart(cartModel)
-                Toast.makeText(context, "Insert Success ${cartModel.idCart}", Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(context, "Insert Fail", Toast.LENGTH_SHORT).show()
-            }
+            detailViewModel.insertCart(cartModel)
+            Log.d("TAG", cartModel.toString())
+            Toast.makeText(context, "Thêm vào giỏ hàng thành công", Toast.LENGTH_SHORT).show()
         }
 
     }

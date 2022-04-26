@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="-20dp"
-                android:background="@drawable/custom_bg_cart"
+                android:background="@drawable/custom_add_cart"
                 android:padding="7dp"
                 android:text="Thêm vào giỏ hàng"
                 android:textColor="@color/white"

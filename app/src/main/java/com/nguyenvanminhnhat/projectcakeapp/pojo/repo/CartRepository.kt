@@ -8,4 +8,8 @@ class CartRepository @Inject constructor(
     private var cartDao: CartDao
 ) {
     fun insertCart(cartModel: CartModel) = cartDao.insertCart(cartModel)
+
+    fun getAllCart() = cartDao.getAll()
+
+    fun deleteCart() = cartDao.deleteAll()
 }

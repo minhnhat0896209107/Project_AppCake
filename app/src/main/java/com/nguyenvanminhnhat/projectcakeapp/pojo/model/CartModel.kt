@@ -6,11 +6,13 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "cartModel")
 data class CartModel(
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     @NonNull
-    var idCart: Int ?= 0,
+    var idCart: String,
     var imageCake : String ?= null,
     var nameCake: String ?= null,
-    var priceCake: Int ?= 0,
+    var priceCake: Int = 0,
     var countQuantity: Int ?= 0
-)
+) {
+    constructor() : this("abc", null, null, 0, 0)
+}

@@ -52,6 +52,9 @@ class HomeFragment : Fragment() {
         tvSeeAll.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_listCategory)
         }
+        ivCart.setOnClickListener {
+            findNavController().navigate(R.id.action_home_to_cart)
+        }
 
     }
     private fun init() {

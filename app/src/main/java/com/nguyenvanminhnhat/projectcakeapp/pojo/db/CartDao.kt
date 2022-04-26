@@ -12,6 +12,6 @@ interface CartDao {
     @Query("SELECT * FROM cartModel")
     fun getAll(): List<CartModel>
 
-    @Delete
-    fun delete(user: CartModel)
+    @Query("DELETE FROM cartModel")
+    fun deleteAll()
 }

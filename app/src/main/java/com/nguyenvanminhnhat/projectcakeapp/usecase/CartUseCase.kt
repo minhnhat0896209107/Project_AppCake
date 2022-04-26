@@ -7,8 +7,12 @@ import javax.inject.Inject
 class CartUseCase @Inject constructor(
     private var cartRepo : CartRepository
 ) {
-    fun excute( cartModel: CartModel): Boolean {
+    fun excute(cartModel: CartModel): Boolean {
         val cart = cartRepo.insertCart(cartModel)
         return cart != 0L
     }
+
+    fun getAllCart() = cartRepo.getAllCart()
+
+    fun deleteCart() = cartRepo.deleteCart()
 }

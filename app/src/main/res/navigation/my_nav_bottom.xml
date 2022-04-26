@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_home_to_detail"
             app:destination="@id/detail" />
+        <action
+            android:id="@+id/action_home_to_cart"
+            app:destination="@id/cart" />
     </fragment>
     <fragment
         android:id="@+id/favourite"
@@ -111,7 +114,11 @@
         android:id="@+id/cart"
         android:name="com.nguyenvanminhnhat.projectcakeapp.view.cart.CartFragment"
         android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cart_to_home"
+            app:destination="@id/home" />
+    </fragment>
 
 
 </navigation>
