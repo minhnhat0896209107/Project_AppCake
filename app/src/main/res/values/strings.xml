@@ -17,5 +17,6 @@
     <string name="input_user_name">Nhập tên người dùng</string>
     <string name="input_phone">Nhập số điện thoại</string>
     <string name="cart">Giỏ hàng</string>
+    <string name="information">Thông tin</string>
 
 </resources>

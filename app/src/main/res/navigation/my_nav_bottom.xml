@@ -118,6 +118,19 @@
         <action
             android:id="@+id/action_cart_to_home"
             app:destination="@id/home" />
+        <action
+            android:id="@+id/action_cart_to_payment"
+            app:destination="@id/payment" />
+    </fragment>
+    <fragment
+        android:id="@+id/payment"
+        android:name="com.nguyenvanminhnhat.projectcakeapp.view.payment.PaymentFragment"
+        android:label="
+        payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_payment_to_home"
+            app:destination="@id/home" />
     </fragment>
 
 

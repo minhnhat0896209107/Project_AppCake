@@ -21,6 +21,8 @@ class CartAdapter (var onClickQuantity : (Long) -> Unit):
     private var items = mutableListOf<CartModel>()
     var totalPrice : Long = 0
     fun setData(items: List<CartModel>) {
+        this.totalPrice = 0
+        this.items.clear()
         this.items.addAll(items)
         notifyDataSetChanged()
     }
@@ -78,8 +80,5 @@ class CartAdapter (var onClickQuantity : (Long) -> Unit):
 
     override fun getItemCount(): Int {
         return items.size
-    }
-    interface ICount {
-        fun onCount(count: Long)
     }
 }

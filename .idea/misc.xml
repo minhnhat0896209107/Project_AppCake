@@ -57,8 +57,10 @@
         <entry key="..\:/BtAndroid/Project_AppCake/app/src/main/res/layout/fragment_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/BtAndroid/Project_AppCake/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/BtAndroid/Project_AppCake/app/src/main/res/layout/fragment_list_category.xml" value="0.25416666666666665" />
+        <entry key="..\:/BtAndroid/Project_AppCake/app/src/main/res/layout/fragment_payment.xml" value="0.25416666666666665" />
         <entry key="..\:/BtAndroid/Project_AppCake/app/src/main/res/layout/item_cart.xml" value="0.24010416666666667" />
         <entry key="..\:/BtAndroid/Project_AppCake/app/src/main/res/layout/item_list_category.xml" value="0.25416666666666665" />
+        <entry key="..\:/BtAndroid/Project_AppCake/app/src/main/res/layout/item_payment.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

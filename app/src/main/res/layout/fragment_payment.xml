@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.payment.PaymentFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:elevation="50dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:id="@+id/ivBackCart"
+            android:src="@drawable/left"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+        <TextView
+            android:id="@+id/tvCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/information"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/edtUser"
+            android:inputType="text"
+            android:hint="Nhập họ và tên"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edtAddress"
+            android:inputType="text"
+            android:hint="Nhập địa chỉ"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edtPhoneUser"
+            android:inputType="phone"
+            android:hint="Nhập số điện thoại"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_20sdp"
+            android:text="Giỏ hàng của bạn"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="@dimen/_5sdp" />
+
+        <Button
+            android:id="@+id/btnFinish"
+            android:background="@drawable/custom_add_cart"
+            android:textColor="@color/white"
+            android:layout_margin="15dp"
+            android:text="Thanh toán"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

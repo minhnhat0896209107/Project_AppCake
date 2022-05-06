@@ -1,5 +1,6 @@
 package com.nguyenvanminhnhat.projectcakeapp.view.cart
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -18,19 +19,20 @@ import com.nguyenvanminhnhat.projectcakeapp.pojo.model.PaymentModel
 import com.nguyenvanminhnhat.projectcakeapp.view.detail.DetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_cart.*
+import kotlinx.android.synthetic.main.item_cart.view.*
+import java.text.DecimalFormat
 import java.time.LocalDateTime
 
 @RequiresApi(Build.VERSION_CODES.O)
 @AndroidEntryPoint
 class CartFragment : Fragment() {
-    private var count = 0
-    private var total = 0
     private val cartViewModel : CartViewModel by viewModels()
     private var paymentModel = PaymentModel("idPayment")
     private val cartAdapter : CartAdapter by lazy {
         CartAdapter(onClickQuantity = onClickQuantity())
     }
 
+    @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.O)
     private fun onClickQuantity(): (Long) -> Unit = {
         paymentModel.apply {
@@ -39,7 +41,9 @@ class CartFragment : Fragment() {
             totalPrice = it
             date = LocalDateTime.now().toString()
         }
-        tvTotalPrice.text = it.toString()
+        val dec = DecimalFormat("###,###.###")
+        val number = dec.format(it)
+        tvTotalPrice.text =  "Tổng tiền: $number VNĐ"
     }
 
     override fun onCreateView(
@@ -57,6 +61,13 @@ class CartFragment : Fragment() {
             findNavController().navigate(R.id.action_cart_to_home)
         }
         cartAdapter.setData(cartViewModel.getAllCart())
+        btnContinue.setOnClickListener {
+            val bundle = Bundle().apply {
+                putSerializable("payment", paymentModel)
+            }
+            findNavController().navigate(R.id.action_cart_to_payment, bundle)
+
+        }
 
         init()
     }
