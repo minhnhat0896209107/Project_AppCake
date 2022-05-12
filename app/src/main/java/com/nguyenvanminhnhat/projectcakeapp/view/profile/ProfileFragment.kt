@@ -38,6 +38,12 @@ class ProfileFragment : Fragment() {
             viewModel.logout()
         }
         viewModel.getUser()
+        tvWebView.setOnClickListener {
+            findNavController().navigate(R.id.action_profile_to_webView)
+        }
+        ivHistory.setOnClickListener {
+            findNavController().navigate(R.id.action_profile_to_history)
+        }
     }
 
     private fun obsListen() {

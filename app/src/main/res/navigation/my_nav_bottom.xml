@@ -70,6 +70,12 @@
         <action
             android:id="@+id/action_profile_to_chat"
             app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_profile_to_webView"
+            app:destination="@id/webView" />
+        <action
+            android:id="@+id/action_profile_to_history"
+            app:destination="@id/history" />
     </fragment>
     <fragment
         android:id="@+id/listCategory"
@@ -132,6 +138,16 @@
             android:id="@+id/action_payment_to_home"
             app:destination="@id/home" />
     </fragment>
+    <fragment
+        android:id="@+id/webView"
+        android:name="com.nguyenvanminhnhat.projectcakeapp.view.profile.webview.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" />
+    <fragment
+        android:id="@+id/history"
+        android:name="com.nguyenvanminhnhat.projectcakeapp.view.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 
 
 </navigation>

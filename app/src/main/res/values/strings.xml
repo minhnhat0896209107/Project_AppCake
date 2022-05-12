@@ -9,7 +9,7 @@
     <string name="sign_up">Đăng ký</string>
     <string name="input_email">Nhập email</string>
     <string name="input_pass">Nhập mật khẩu</string>
-    <string name="category">Thể loại</string>
+    <string name="category">Mua nhiều</string>
     <string name="profile">Profile</string>
     <string name="over_popular_cake">Bánh nổi bật</string>
     <string name="blog">Blog</string>
@@ -17,6 +17,6 @@
     <string name="input_user_name">Nhập tên người dùng</string>
     <string name="input_phone">Nhập số điện thoại</string>
     <string name="cart">Giỏ hàng</string>
-    <string name="information">Thông tin</string>
+    <string name="information">Thông tin giỏ hàng</string>
 
 </resources>

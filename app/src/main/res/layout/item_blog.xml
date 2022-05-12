@@ -10,14 +10,14 @@
         android:layout_height="wrap_content">
         <de.hdodenhof.circleimageview.CircleImageView
             android:src="@drawable/rv01"
-            android:layout_width="70dp"
-            android:layout_height="70dp"/>
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
         <TextView
             android:id="@+id/tvUserNameBlog"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:text="User name"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:layout_marginLeft="10dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
         android:layout_marginTop="7dp"
         android:text="Title"
         android:layout_gravity="center"
-        android:textSize="25sp"
+        android:textSize="18sp"
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -42,14 +42,14 @@
         android:src="@drawable/talia"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="180dp"/>
     <TextView
         android:id="@+id/tvDescriptionBlog"
         android:text="Description"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -66,7 +66,7 @@
         <TextView
             android:id="@+id/tvLike"
             android:text="10 yeu thich"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:layout_marginLeft="10dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
