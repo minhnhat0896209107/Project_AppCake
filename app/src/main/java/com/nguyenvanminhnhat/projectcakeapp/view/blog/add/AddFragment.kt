@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -46,6 +47,9 @@ class AddFragment : Fragment() {
         init()
         ivBlog.setOnClickListener {
             choosePicture()
+        }
+        btnOnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_add_to_blog)
         }
         getUser()
     }
